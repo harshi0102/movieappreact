@@ -1,13 +1,14 @@
-import React from "react";
-import Header from "./components/Header";
-import MovieList from "./components/MovieList";
-import "./App.css";
+// App.js
+import React from 'react';
+import HeroSection from './components/HeroSection';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Header />
-      <MovieList />
+      <HeroSection />
     </div>
   );
 }

@@ -1,0 +1,228 @@
+/* Hero Section Styling */
+.hero-container {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Navigation Bar Styling */
+  .navbar {
+    position: relative;  /* Changed from sticky to relative */
+    width: 100%;
+    background-color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    display: flex;
+    justify-content: center; /* Center the navbar */
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .navbar:hover {
+    background-color: #444; /* Darker background on hover */
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    padding: 10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #f0f0f0; /* Lighter text color on hover */
+  }
+  
+  /* Active Link Styling */
+  .nav-links .active {
+    color: #ff6347; /* Highlight active link */
+  }
+  
+  /* Hamburger Menu for Mobile */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .hamburger div {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .nav-links-mobile {
+    display: none;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+  
+  .nav-links-mobile ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+  }
+  
+  .nav-links-mobile a {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .nav-links-mobile a:hover {
+    color: #f0f0f0;
+  }
+  
+  .navbar.open .nav-links-mobile {
+    display: block;
+  }
+  
+  .navbar.open .hamburger div:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 6px;
+  }
+  
+  .navbar.open .hamburger div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navbar.open .hamburger div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -6px;
+  }
+  
+  /* Hero Carousel */
+  .hero-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .hero-content h2 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  /* Category Filter */
+  .filters {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .category-filter {
+    padding: 8px;
+    background-color: #fff;
+    border: none;
+    font-size: 1rem;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  /* Movie List */
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #111;
+  }
+  
+  .movie-card {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .movie-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .movie-card h3 {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+    }
+  
+    .movie-card {
+      padding: 10px;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  }
+  
