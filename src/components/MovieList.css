@@ -1,0 +1,31 @@
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .movie-list p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .movie-card {
+      max-width: 200px;
+      margin: 10px;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Tablet Layout */
+  @media (max-width: 1024px) {
+    .movie-card {
+      max-width: 220px;
+    }
+  }
+  

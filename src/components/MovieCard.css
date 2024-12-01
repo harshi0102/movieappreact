@@ -1,0 +1,30 @@
+.movie-card {
+    width: 100%;
+    max-width: 250px;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-card .movie-info {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+  }
+  
+  .movie-card h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .movie-card p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  

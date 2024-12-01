@@ -1,0 +1,159 @@
+/* General Header Styles */
+.header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 10;
+    animation: fadeIn 1s ease-out;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 2rem; /* Adds space between nav items */
+}
+
+/* Style for Navigation List Items */
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6347; /* Tomato color on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+/* Menu Toggle Button (Hamburger Menu) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Animation for Menu Toggle */
+nav.open {
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    animation: slideIn 0.3s ease-in-out;
+    gap: 1.5rem; /* Space between items in mobile view */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav.open {
+        display: block;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Desktop and Larger Screens */
+@media (min-width: 1025px) {
+    nav {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: row;
+        position: static;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Light box-shadow on larger screens */
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
